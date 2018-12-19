@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace HalloSingelton
 {
@@ -8,7 +9,10 @@ namespace HalloSingelton
         {
             Console.WriteLine("Hello World!");
 
-            Logger.Instance.Log("Hallo Log");
+            for (int i = 0; i < 10; i++)
+            {
+                Task.Run(() => Logger.Instance.Log("Hallo Log"));
+            }
 
             Logger.Instance.Log("Ende");
             Console.ReadLine();
@@ -19,22 +23,29 @@ namespace HalloSingelton
     {
         private static Logger logger = null;
 
+        private static object syncObject = new object();
         public static Logger Instance
         {
             get
             {
-                if (logger == null)
-                    logger = new Logger();
+                lock (syncObject)
+                {
+                    if (logger == null)
+                        logger = new Logger();
+                }
                 return logger;
             }
         }
 
+        static int instCounter = 0;
         private Logger()
-        { }
+        {
+            instCounter++;
+        }
 
         public void Log(string msg)
         {
-            Console.WriteLine($"[{DateTime.Now}] {msg}");
+            Console.WriteLine($"({instCounter})[{DateTime.Now}] {msg}");
         }
     }
 }
