@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Data.EF.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Logic", "ppedv.EverGreen.Logic\ppedv.EverGreen.Logic.csproj", "{2305264D-C0F6-4F6D-AB50-6E439B80AB0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.DevConsole", "ppedv.EverGreen.UI.DevConsole\ppedv.EverGreen.UI.DevConsole.csproj", "{BFD3D24D-124D-4592-8616-EF6AA44A4E31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2305264D-C0F6-4F6D-AB50-6E439B80AB0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2305264D-C0F6-4F6D-AB50-6E439B80AB0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2305264D-C0F6-4F6D-AB50-6E439B80AB0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFD3D24D-124D-4592-8616-EF6AA44A4E31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD3D24D-124D-4592-8616-EF6AA44A4E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFD3D24D-124D-4592-8616-EF6AA44A4E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFD3D24D-124D-4592-8616-EF6AA44A4E31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
