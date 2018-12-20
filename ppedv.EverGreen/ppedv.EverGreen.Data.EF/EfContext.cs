@@ -1,5 +1,6 @@
 ﻿using ppedv.EverGreen.Model;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ppedv.EverGreen.Data.EF
 {
@@ -14,5 +15,12 @@ namespace ppedv.EverGreen.Data.EF
 
         public EfContext() : this("Server=.;Database=EverGreen_dev;Trusted_Connection=true;")
         { }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //System.Data.Entity.ModelConfiguration.Conventions.
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+
+        }
     }
 }
