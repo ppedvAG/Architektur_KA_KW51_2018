@@ -2,6 +2,7 @@
 using ppedv.EverGreen.Model.Contracts;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ppedv.EverGreen.Logic
 {
@@ -9,6 +10,20 @@ namespace ppedv.EverGreen.Logic
     {
         public IRepository Repository { get; private set; }
 
+
+        public BaumArt GetBaumArtMitGrößtenBäumen()
+        {
+            return Repository.GetAll<BaumArt>().OrderByDescending(x => x.Trees.Sum(y => y.Height)).FirstOrDefault();
+        }
+
+        public void CreateDemoData()
+        {
+            foreach (var item in GetDemoData())
+            {
+                Repository.Add(item);
+            }
+            Repository.Save();
+        }
 
         public IEnumerable<Tannenbaum> GetDemoData()
         {
@@ -45,17 +60,14 @@ namespace ppedv.EverGreen.Logic
 
                 yield return new Tannenbaum()
                 {
-                    BaumArt = ba2,
-                    Herkunft = h2,
+                    BaumArt = ba3,
+                    Herkunft = h3,
                     Height = 400 + (i * 33),
                     Price = 2.4m * i,
                     Width = 150 + (i * 22),
                     Fällzeit = DateTime.Now.AddDays(i * 70 * -1)
                 };
             }
-
-
-
         }
 
         public Core(IRepository repo) //<----dependency injection in here
@@ -63,7 +75,10 @@ namespace ppedv.EverGreen.Logic
             Repository = repo;
         }
 
-        public Core() : this(new Data.EF.EfRepository())
+        //public Core() : this(new Data.EF.EfRepository())
+        //{ }
+
+        public Core() : this(new Data.XML.XmlRepository())
         { }
     }
 }

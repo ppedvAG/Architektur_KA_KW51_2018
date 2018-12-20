@@ -17,6 +17,8 @@ namespace ppedv.EverGreen.UI.DevConsole
 
             var core = new Core();
 
+            //core.CreateDemoData();
+
             foreach (var b in core.Repository.GetAll<Tannenbaum>())
             {
                 Console.WriteLine($"{b.BaumArt.Name} {b.Height}cm {b.Price:c}");
