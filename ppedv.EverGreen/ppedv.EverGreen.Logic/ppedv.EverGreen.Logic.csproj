@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.EverGreen.Data.EF\ppedv.EverGreen.Data.EF.csproj" />
+    <ProjectReference Include="..\ppedv.EverGreen.Model\ppedv.EverGreen.Model.csproj" />
+  </ItemGroup>
+
+</Project>
