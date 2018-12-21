@@ -1,9 +1,6 @@
 ﻿using ppedv.EverGreen.Logic;
 using ppedv.EverGreen.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace ppedv.EverGreen.UI.Web.Controllers
@@ -51,16 +48,17 @@ namespace ppedv.EverGreen.UI.Web.Controllers
         // GET: Baum/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(core.Repository.GetById<Tannenbaum>(id));
         }
 
         // POST: Baum/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Tannenbaum baum)
         {
             try
             {
-                // TODO: Add update logic here
+                core.Repository.Update(baum);
+                core.Repository.Save();
 
                 return RedirectToAction("Index");
             }
@@ -73,7 +71,7 @@ namespace ppedv.EverGreen.UI.Web.Controllers
         // GET: Baum/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(core.Repository.GetById<Tannenbaum>(id));
         }
 
         // POST: Baum/Delete/5
@@ -83,6 +81,12 @@ namespace ppedv.EverGreen.UI.Web.Controllers
             try
             {
                 // TODO: Add delete logic here
+                var loaded = core.Repository.GetById<Tannenbaum>(id);
+                if (loaded != null)
+                {
+                    core.Repository.Delete(loaded);
+                    core.Repository.Save();
+                }
 
                 return RedirectToAction("Index");
             }
