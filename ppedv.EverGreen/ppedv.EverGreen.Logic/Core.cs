@@ -75,10 +75,10 @@ namespace ppedv.EverGreen.Logic
             Repository = repo;
         }
 
-        //public Core() : this(new Data.EF.EfRepository())
-        //{ }
-
-        public Core() : this(new Data.XML.XmlRepository())
+        public Core() : this(new Data.EF.EfRepository())
         { }
+
+        //public Core() : this(new Data.XML.XmlRepository())
+        //{ }
     }
 }

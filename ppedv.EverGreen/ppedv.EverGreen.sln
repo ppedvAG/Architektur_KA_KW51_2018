@@ -3,21 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Model", "ppedv.EverGreen.Model\ppedv.EverGreen.Model.csproj", "{F39D5994-8FC8-4D89-A33C-61CDC712C6EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.EverGreen.Model", "ppedv.EverGreen.Model\ppedv.EverGreen.Model.csproj", "{F39D5994-8FC8-4D89-A33C-61CDC712C6EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Data.EF", "ppedv.EverGreen.Data.EF\ppedv.EverGreen.Data.EF.csproj", "{27AB3756-9259-48D7-9D75-55033A87FEAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Data.EF.Tests", "ppedv.EverGreen.Data.EF.Tests\ppedv.EverGreen.Data.EF.Tests.csproj", "{E2AD3EAE-E1E1-4439-AACF-0E26FEAADDE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Logic", "ppedv.EverGreen.Logic\ppedv.EverGreen.Logic.csproj", "{2305264D-C0F6-4F6D-AB50-6E439B80AB0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.EverGreen.Logic", "ppedv.EverGreen.Logic\ppedv.EverGreen.Logic.csproj", "{2305264D-C0F6-4F6D-AB50-6E439B80AB0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.DevConsole", "ppedv.EverGreen.UI.DevConsole\ppedv.EverGreen.UI.DevConsole.csproj", "{BFD3D24D-124D-4592-8616-EF6AA44A4E31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Data.XML", "ppedv.EverGreen.Data.XML\ppedv.EverGreen.Data.XML.csproj", "{5178DBBC-E44A-4296-BC39-23F3407D4846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ppedv.EverGreen.Data.XML", "ppedv.EverGreen.Data.XML\ppedv.EverGreen.Data.XML.csproj", "{5178DBBC-E44A-4296-BC39-23F3407D4846}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Data.XML.Tests", "ppedv.EverGreen.Data.XML.Tests\ppedv.EverGreen.Data.XML.Tests.csproj", "{B9D882B8-B581-4379-A786-C6195FFB71C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.Logic.Tests", "ppedv.EverGreen.Logic.Tests\ppedv.EverGreen.Logic.Tests.csproj", "{6B82413A-5F56-4350-A6A6-DDBEB0EBD8CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.Web", "ppedv.EverGreen.UI.Web\ppedv.EverGreen.UI.Web.csproj", "{8F1D96F1-8201-4F68-A1B9-E9DB00F36718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.Web.Tests", "ppedv.EverGreen.UI.Web.Tests\ppedv.EverGreen.UI.Web.Tests.csproj", "{D858C89A-51B9-4718-8D59-B1EF76462405}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{6B82413A-5F56-4350-A6A6-DDBEB0EBD8CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B82413A-5F56-4350-A6A6-DDBEB0EBD8CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B82413A-5F56-4350-A6A6-DDBEB0EBD8CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F1D96F1-8201-4F68-A1B9-E9DB00F36718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F1D96F1-8201-4F68-A1B9-E9DB00F36718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F1D96F1-8201-4F68-A1B9-E9DB00F36718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F1D96F1-8201-4F68-A1B9-E9DB00F36718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D858C89A-51B9-4718-8D59-B1EF76462405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D858C89A-51B9-4718-8D59-B1EF76462405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D858C89A-51B9-4718-8D59-B1EF76462405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D858C89A-51B9-4718-8D59-B1EF76462405}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
