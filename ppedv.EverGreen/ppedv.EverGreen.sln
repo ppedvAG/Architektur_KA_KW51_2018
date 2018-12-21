@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.Web", "p
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.Web.Tests", "ppedv.EverGreen.UI.Web.Tests\ppedv.EverGreen.UI.Web.Tests.csproj", "{D858C89A-51B9-4718-8D59-B1EF76462405}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ppedv.EverGreen.UI.WPF", "ppedv.EverGreen.UI.WPF\ppedv.EverGreen.UI.WPF.csproj", "{FD2273BA-4A0C-48C0-88CC-CC227098FC99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{D858C89A-51B9-4718-8D59-B1EF76462405}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D858C89A-51B9-4718-8D59-B1EF76462405}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D858C89A-51B9-4718-8D59-B1EF76462405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2273BA-4A0C-48C0-88CC-CC227098FC99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2273BA-4A0C-48C0-88CC-CC227098FC99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2273BA-4A0C-48C0-88CC-CC227098FC99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2273BA-4A0C-48C0-88CC-CC227098FC99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
