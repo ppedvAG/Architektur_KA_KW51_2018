@@ -4,24 +4,39 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ppedv.EverGreen.UI.WPF.View"
+             xmlns:vm="clr-namespace:ppedv.EverGreen.UI.WPF.ViewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-
+    <UserControl.DataContext>
+        <vm:BaumViewModel/>
+    </UserControl.DataContext>
     <DockPanel>
-        <DataGrid Width="280" DockPanel.Dock="Left"/>
+        <WrapPanel DockPanel.Dock="Top" Margin="8">
+            <Button Command="{Binding SaveCommand}">Speichern</Button>
+            <Button Command="{Binding NewCommand}">Neu</Button>
+            <Button>Löschen</Button>
+        </WrapPanel>
+        <DataGrid Width="280" DockPanel.Dock="Left" 
+                  ItemsSource="{Binding BaumListe}"
+                  SelectedItem="{Binding SelectedBaum}"/>
         <StackPanel Margin="8">
+            <Label>Name</Label>
+            <TextBlock Text="{Binding SelectedBaum.BaumArt.Name}"/>
             <Label>Höhe</Label>
-            <TextBox/>
+            <TextBox Text="{Binding SelectedBaum.Height}"/>
+            <TextBlock Text="{Binding HöheInFuß}"/>
             <Label>Breite</Label>
-            <TextBox/>
+            <TextBox Text="{Binding SelectedBaum.Width}"/>
             <Label>Preis</Label>
-            <TextBox/>
+            <TextBox Text="{Binding SelectedBaum.Price}"/>
             <Label>Fälldatum</Label>
-            <DatePicker/>
+            <DatePicker SelectedDate="{Binding SelectedBaum.Fällzeit}"/>
             <Label>Art</Label>
-            <ComboBox />
+            <ComboBox ItemsSource="{Binding Arten}" DisplayMemberPath="Name" 
+                      SelectedItem="{Binding SelectedBaum.BaumArt}" />
             <Label>Herkunft</Label>
-            <ComboBox />
+            <ComboBox ItemsSource="{Binding HerkunftList}" DisplayMemberPath="Beschreibung"
+                      SelectedItem="{Binding SelectedBaum.Herkunft}"/>
         </StackPanel>
     </DockPanel>
 </UserControl>

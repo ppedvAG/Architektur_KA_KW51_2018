@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\RelayCommand.cs" />
+    <Compile Include="ViewModel\BaumViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\BaumartView.xaml.cs">
       <DependentUpon>BaumartView.xaml</DependentUpon>
     </Compile>
@@ -107,6 +110,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,7 +120,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Content Include="..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll">
+      <Link>EntityFramework.SqlServer.dll</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ppedv.EverGreen.Logic\ppedv.EverGreen.Logic.csproj">
+      <Project>{2305264d-c0f6-4f6d-ab50-6e439b80ab0a}</Project>
+      <Name>ppedv.EverGreen.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ppedv.EverGreen.Model\ppedv.EverGreen.Model.csproj">
+      <Project>{f39d5994-8fc8-4d89-a33c-61cdc712c6ef}</Project>
+      <Name>ppedv.EverGreen.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
