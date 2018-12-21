@@ -1,5 +1,6 @@
 ﻿using ppedv.EverGreen.Logic;
 using ppedv.EverGreen.Model;
+using ppedv.EverGreen.UI.Web.Models;
 using System;
 using System.Web.Mvc;
 
@@ -48,7 +49,15 @@ namespace ppedv.EverGreen.UI.Web.Controllers
         // GET: Baum/Edit/5
         public ActionResult Edit(int id)
         {
-            return View(core.Repository.GetById<Tannenbaum>(id));
+            BaumViewModel bvm = new BaumViewModel()
+            {
+                Baum = core.Repository.GetById<Tannenbaum>(id),
+                BaumArten = core.Repository.GetAll<BaumArt>(),
+                Herkünften = core.Repository.GetAll<Herkunft>()
+            };
+
+
+            return View(bvm);
         }
 
         // POST: Baum/Edit/5
